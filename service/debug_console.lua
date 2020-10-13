@@ -164,7 +164,16 @@ function COMMAND.help()
 		netstat = "netstat : show netstat",
 		profactive = "profactive [on|off] : active/deactive jemalloc heap profilling",
 		dumpheap = "dumpheap : dump heap profilling",
+		test_line_carrier = "test line carrier",
 	}
+end
+
+function COMMAND.test_line_carrier(...)
+    local input = {...}
+    print("count:", #input)
+    print(input[1])
+    print(input[2])
+    return "ok"
 end
 
 function COMMAND.clearcache()
